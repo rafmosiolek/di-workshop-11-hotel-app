@@ -1,0 +1,24 @@
+{
+  "name": "workshop-hotel-system",
+  "version": "1.0.0",
+  "description": "ADA Workshop, building a hotel booking app with BDD/TDD.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha '**/*.test.js'",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafmosiolek/di-workshop-11-hotel-app.git"
+  },
+  "author": "Raf M.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafmosiolek/di-workshop-11-hotel-app/issues"
+  },
+  "homepage": "https://github.com/rafmosiolek/di-workshop-11-hotel-app#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
