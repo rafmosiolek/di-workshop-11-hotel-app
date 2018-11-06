@@ -18,6 +18,12 @@ class Hotel {
         }
         return Math.ceil(average);
     }
+
+    urlSlug() {
+        let separatedName = this.name.split(" ").join("_");
+        let separatedCity = this.city.split(" ").join("_");
+        return (separatedName + "_" + separatedCity).toLowerCase();
+    }
 }
 
 module.exports = Hotel;

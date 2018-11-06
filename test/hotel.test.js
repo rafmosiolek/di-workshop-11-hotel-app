@@ -1,7 +1,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const Hotel = require('../models/hotel');
+const Hotel = require('../models/Hotel');
 
 describe('Hotel class', () => {
     it('is a class', () => {
@@ -23,18 +23,6 @@ describe('Hotel class', () => {
             let myHotel = new Hotel(hotelName, hotelLocationCity);
             expect(myHotel.reviews).to.deep.equal([]);
         })
-        // it('initialise instance of the class with attribute reviewCount and sets it to 0', () => {
-        //     let hotelName = 'Hilton Metropole';
-        //     let hotelLocationCity = 'London';
-        //     let myHotel = new Hotel(hotelName, hotelLocationCity);
-        //     expect(myHotel.reviewCount).to.equal(0);
-        // })
-        // it('initialise instance of the class with attribute rating and sets it to 0', () => {
-        //     let hotelName = 'Hilton Metropole';
-        //     let hotelLocationCity = 'London';
-        //     let myHotel = new Hotel(hotelName, hotelLocationCity);
-        //     expect(myHotel.rating).to.equal(0);
-        // })
     })
 
     describe('#reviewCount method', () => {
@@ -62,6 +50,16 @@ describe('Hotel class', () => {
             let hotelName = 'Hilton Metropole';
             let hotelLocationCity = 'London';
             let myHotel = new Hotel(hotelName, hotelLocationCity);
+        })
+    })
+
+    describe('#urlSlug method', () => {
+        it('should return name and city as string with words separated by underscore', () => {
+            let hotelName = 'Hilton Metropole';
+            let hotelLocationCity = 'London';
+            let myHotel = new Hotel(hotelName, hotelLocationCity);
+            let result = myHotel.urlSlug();
+            expect(result).to.equal('hilton_metropole_london');
         })
     })
 });
